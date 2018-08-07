@@ -1,0 +1,25 @@
+
+.the-tieu-su{
+ background: azure
+
+}
+.hinh-anh{
+    border: 3px coral solid;
+   
+    
+}
+
+.dinh-chu{
+    text-align: center;
+    border: 3px coral solid;
+    display: flex; 
+    justify-content: center;
+    width: 150px;
+}
+.size-img{
+
+   width:660px;
+   height:470px;
+}
+
+

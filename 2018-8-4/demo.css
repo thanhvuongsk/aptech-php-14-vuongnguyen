@@ -1,0 +1,151 @@
+.center-header{
+    height: auto;
+    width: auto;
+    display: flex; 
+    justify-content: center; 
+}
+.header{
+    height: auto;
+    width: auto;
+    border: 2px white solid;
+    background: white;
+    display: flex; 
+    justify-content: left;
+    
+    
+}
+
+.content{
+    height: auto;
+    width: auto;
+  
+    
+    background: #5F5F5F;
+    display: flex;
+    justify-content: center;
+
+}
+ 
+
+.logo-header-img{
+  
+ height: auto;
+ width: auto;
+ border: 2px white solid;
+ display: flex;
+ justify-content: center;
+}
+.search{
+    height: auto;
+    width: auto;
+    display:flex;
+    justify-content: center;
+    margin-left: auto;
+    
+
+    
+
+}
+.margin-top{
+    margin-top: auto;
+   
+}
+.text-info{
+    height: auto;
+    width: auto;
+    border: 2px white solid;
+    margin: auto;
+    margin-top: 5px;
+
+    
+}
+.thu-hep-text{
+    margin: 0%;
+    color: #5E2D5D;
+   
+}
+.content-menu{
+    width: auto;
+    height: auto;
+    display: flex;
+    border:1px #5E2D5D solid;
+    background: #5E2D5D
+}
+.content-menu-can-chinh{
+   
+    
+    color: darkgray;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+.icon-international{
+    
+    display: flex;
+    justify-content: center;
+   
+
+}
+.icon-international-just{
+   
+   
+    margin-top: 0px;
+    
+
+}
+.footer{
+    height: auto;
+    width: auto;
+    
+    background: rgb(129, 129, 129);
+    display: flex;
+    
+}
+.footer-kv1{
+   
+   width: auto;
+   height: 200px;
+   padding-left: 100px;
+   padding-top: 50px;
+
+}
+.footer-kv2{
+    
+    width: auto;
+    height: 200px;
+    margin-left: auto;
+    padding-right: 130px;
+}
+.footer-kv3{
+    
+   width: 300px;
+   height: auto;
+}
+.thu-hep-text-footer{
+    margin: 0%;
+    color: rgb(226, 225, 225);
+   
+}
+.content-img{
+    
+    width: auto;
+    height:auto;
+    display: flex;
+    
+    
+    
+}
+.content-info{
+    height: auto;
+    width: auto;
+    display:flex;
+    
+    
+}
+.content-text{
+    color: darkgray;
+    padding-left: 10px;
+
+
+}
