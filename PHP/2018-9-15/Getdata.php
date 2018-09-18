@@ -10,9 +10,57 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   </head>
   <body>
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">email</th>
+      <th scope="col">password</th>
+     
+    </tr>
+  </thead>
+ <tbody>
+
+  <?php
+
+
     
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "aptech_php_14_thanhvuong2";
 
+// Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
+    $sql = "SELECT email,pw FROM users";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+
+    echo '<tbody>';
+    
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<tr>';
+           // echo "email: " . $row["email"] . " " . $row["pw"] . "<br>";
+           echo "<th scope='row'></th>";
+           echo "<td>$row[email]</td>";
+           echo "<td>$row[pw]</td>";
+           echo '</tr>';
+        }
+    } else {
+        echo "0 results";
+    }
+
+    mysqli_close($conn);
+    ?>
+     </tbody>
+    </table>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
