@@ -20,55 +20,45 @@
     </tr>
   </thead>
  <tbody>
-  <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "aptech_php_14_thanhvuong2";
-        //  $servername = "192.168.60.141";
-        //  $username = "nam";
-        //  $password = "123456";
-        //  $dbname = "aptech_php_14";
-// Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-   
-    echo $_POST["email"];
-    echo "<br>";
-    echo $_POST["pw"];
-    $tam1 = $_POST["email"];
-    $tam2 = $_POST["pw"];
-    $sql = "SELECT * FROM users where pw = '".$tam2."' AND email = '".$tam1."' ";
-    var_dump($sql);
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) > 0) {
+     <?php
+         $servername = "192.168.60.141";
+         $username = "nam";
+         $password = "123456";
+         $dbname = "aptech_php_14";
+     
+     // Create connection
+         $conn = mysqli_connect($servername, $username, $password, $dbname);
+     // Check connection
+         if (!$conn) {
+             die("Connection failed: " . mysqli_connect_error());
+         }
+     
+         $sql = "SELECT id,name,email,password,created_date FROM users";
+         $result = mysqli_query($conn, $sql);
+     
+         if (mysqli_num_rows($result) > 0) {
          // output data of each row
-
-        echo '<tbody>';
-
-        while ($row = mysqli_fetch_assoc($result)) {
-            
-             if ($row['pw'] == $_POST["pw"]) {
-                echo '<tr>';
-                echo "<th scope='row'>1</th>";
+     
+         echo '<tbody>';
+         
+             while ($row = mysqli_fetch_assoc($result)) {
+                 echo '<tr>';
+                // echo "email: " . $row["email"] . " " . $row["pw"] . "<br>";
+                echo "<th scope='row'>$row[id]</th>";
+                echo "<td>$row[name]</td>";
                 echo "<td>$row[email]</td>";
-                echo "<td>$row[pw]</td>";
+                echo "<td>$row[password]</td>";
+                echo "<td>$row[created_date]</td>";
                 echo '</tr>';
-            }
-            
-            // echo "email: " . $row["email"] . " " . $row["pw"] . "<br>";
-
-        }
-    } else {
-        echo "no result ";
-    }
-
-    mysqli_close($conn);
-    ?>
-    </tbody>
+             }
+         } else {
+             echo "0 results";
+         }
+     
+         mysqli_close($conn);
+     
+     ?>
+      </tbody>
     </table>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
